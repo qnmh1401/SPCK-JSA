@@ -21,7 +21,7 @@ body {
   position: absolute;
   z-index: 1;
   width: 400px;
-  height: 550px;
+  height: 530px;
   background-color: #d3221c;
   margin-left: 500px;
   margin-top: 50px;
@@ -73,13 +73,6 @@ label {
   margin-left: 280px;
   margin-top: 30px;
   border: none;
-  margin-bottom: 0;
-  padding: 0;
-}
-
-.haveacc {
-  margin-top: 7px;
-  text-align: center;
 }
 
 .btn:hover {

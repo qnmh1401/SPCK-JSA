@@ -147,7 +147,7 @@
         </from>
       </div>
     </div>
-  
+    <!-- nếu button này click, hiển thị phần đó -->
     <!-- -------------------------------------------------------------------------------------------------------------------->
 
     <div class="container">
@@ -157,11 +157,19 @@
           class="tab-ns tablinks"
           onclick="openEvents(event, 'now-showing')"
         >
+          <p class="ctn-tab-ns ctn-tab">ALL TITLES</p>
+          <hr class="hr-ns hr-tab" />
+        </div>
+        <div
+          id="now-showing-btn"
+          class="tab-ns tablinks"
+          onclick="openEvents(event, 'now-showing')"
+        >
           <p class="ctn-tab-ns ctn-tab">NOW SHOWING</p>
           <hr class="hr-ns hr-tab" />
         </div>
         <div
-          id="coming-soon-btn"
+        id="coming-soon-btn"
           class="tab-cs tablinks"
           onclick="openEvents(event, 'comming-soon')"
         >
