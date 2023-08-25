@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In for Cinema Tickets</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="signin-form">
+      <h1>Sign In</h1>
+
+      <h3 class="email header3">Email</h3>
+      <input
+        id="inputemail"
+        class="input"
+        type="text"
+        placeholder="Fill in your email address"
+      />
+      <p id="invalidemail" class="alert"></p>
+
+      <h3 class="pass header3">Password</h3>
+      <input
+        id="inputpass"
+        class="input"
+        type="password"
+        placeholder="Fill in your password"
+      />
+      <p id="invalidpass" class="alert"></p>
+      <input id="checkbox" class="onpass" type="checkbox" name="onpass" />
+      <label id="onpass" for="onpass"></label>
+
+      <button class="btn" id="btn">SUMIT</button>
+      <p class="noacc">
+        No account?
+        <a class="clickme" href="../regester/signup.html">Click here</a>
+      </p>
+    </div>
+
+    <script src="../regester/index.js"></script>
+  </body>
+</html>

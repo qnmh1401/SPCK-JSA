@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sign Up For Cinema Tickets</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <form>
+      <div class="signupform">
+        <h1>Sign Up</h1>
+        <h3 class="name header3">Your name</h3>
+        <input
+          id="inputinfor"
+          class="input"
+          type="text"
+          placeholder="Fill in your name"
+        />
+        <p id="invalidname" class="alert"></p>
+
+        <h3 class="email header3">Email</h3>
+        <input
+          id="inputemail"
+          class="input"
+          type="text"
+          placeholder="Fill in your email address"
+        />
+        <p id="invalidemail" class="alert"></p>
+
+        <h3 class="pass header3">Password</h3>
+        <input
+          id="inputpass"
+          class="input"
+          type="password"
+          placeholder="Fill in your password"
+        />
+        <p id="invalidpass" class="alert"></p>
+
+        <input id="checkbox" class="onpass" type="checkbox" name="onpass" />
+        <label id="onpass" for="onpass"></label>
+
+        <button class="btn" id="btn">SUMIT</button>
+        <p class="haveacc">
+          Already have an account? <a href="../signin/index.html">Click here</a>
+        </p>
+      </div>
+    </form>
+
+    <script src="signup.js"></script>
+  </body>
+</html>

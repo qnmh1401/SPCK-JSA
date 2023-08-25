@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Movie</title>
+    <link rel="stylesheet" href="HomePage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="HomePage.html"
+        ><img
+          class="img"
+          src="https://marketplace.canva.com/EAFLWSA1BHA/1/0/1600w/canva-red-and-beige-illustrated-cinema-ticket-DrJQ4i_RRdg.jpg"
+      /></a>
+
+      <div class="user">
+        <div class="search">
+          <input type="text" class="seach-bar" placeholder="Tìm kiếm..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="signup-signin">
+          <a href="./regester/signup.html"
+            ><i class="fa-solid fa-user"></i><b></i>Sign In</b></a
+          >
+          <b>|</b>
+          <a href="./signin/index.html"><b>Sign Up</b></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-two">
+      <div class="list">
+        <a><p>BUY TICKET</p></a>
+        <p>|</p>
+        <a><p>MOVIES</p></a>
+        <p>|</p>
+        <a><p>THEATER/PRICE</p></a>
+        <p>|</p>
+        <a><p>EVENTS</p></a>
+        <p>|</p>
+        <a><p>SUPPORT</p></a>
+        <p>|</p>
+        <a><p>ABOUT</p></a>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------------------------ -->
+    <div class="thetop">
+      <!-- Slideshow container -->
+      <div class="slidesimg">
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img
+              class="slide"
+              src="https://antiquipop.hypotheses.org/files/2018/08/official-avatar-movie-poster-3.jpg"
+            />
+            <div class="text text1"></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img
+              class="slide"
+              src="https://wallpapershome.com/images/pages/pic_h/7298.jpeg"
+            />
+            <div class="text text2">
+              <img class="imggotham" src="img1.png" />
+              <div class="gotham">
+                <p>T H E</p>
+                <p>D A R K</p>
+                <p>K N I G H T</p>
+                <p>I S</p>
+                <p>C O M I N G</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img
+              class="slide"
+              src="https://wallpapers.com/images/hd/the-avengers-vm16xv4a69smdauy.jpg"
+            />
+            <div class="text text3"></div>
+          </div>
+
+          <div class="mySlides slide4 fade">
+            <div class="numbertext">4 / 4</div>
+            <img
+              class="slide"
+              src="https://c4.wallpaperflare.com/wallpaper/660/612/942/doctor-strange-2016-wallpaper-preview.jpg"
+            />
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <!-- The dots/circles -->
+        <div
+          style="
+            margin-left: 450px;
+            position: absolute;
+            z-index: 5;
+            margin-top: -50px;
+          "
+        >
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+
+      <div class="buytks">
+        <p class="tittle-btks">QUICK BUY TICKET</p>
+        <from action="">
+          <select name="movie" class="select-movie selector" id="select-movie">
+            <option value="select">Select Movie</option>
+          </select>
+
+          <select name="date" class="select-date selector" id="select-date">
+            <option value="select">Select Date</option>
+          </select>
+
+          <select
+            name="cinema"
+            class="select-cinema selector"
+            id="select-cinema"
+          >
+            <option value="select">Select Cinema</option>
+          </select>
+
+          <input class="quick-buy" type="submit" value="BUY" />
+        </from>
+      </div>
+    </div>
+  
+    <!-- -------------------------------------------------------------------------------------------------------------------->
+
+    <div class="container">
+      <div class="container-tab tab">
+        <div
+          id="defaultOpen"
+          class="tab-ns tablinks"
+          onclick="openEvents(event, 'now-showing')"
+        >
+          <p class="ctn-tab-ns ctn-tab">NOW SHOWING</p>
+          <hr class="hr-ns hr-tab" />
+        </div>
+        <div
+          id="coming-soon-btn"
+          class="tab-cs tablinks"
+          onclick="openEvents(event, 'comming-soon')"
+        >
+          <p class="ctn-tab-cs ctn-tab">COMING SOON</p>
+          <hr class="hr-cs hr-tab" />
+        </div>
+      </div>
+
+      <div
+        id="now-showing"
+        class="container-nowshowing container-card tabcontent"
+      >
+        <!-- <div class="container-NS">
+          <div class="card">
+            <div class="card-hover">
+              <p>T16</p>
+              <a><button>Details</button></a>
+            </div>
+            <img src="https://m.media-amazon.com/images/I/71Lvqoov42L.jpg" />
+            <div class="content-card">
+              <b>Avatar</b>
+              <hr />
+              <div class="card-details">
+                <p class="details-1">120 min</p>
+                <hr />
+                <p class="details-2">11/2/2010</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <div
+        id="comming-soon"
+        class="container-comingsoon container-card tabcontent"
+        s
+      >
+        <!-- <div class="container-comingsoon"></div> -->
+      </div>
+    </div>
+
+    <!-- <div class="tab container-tab">
+      <div class="tab-ns tablinks" onclick="openCity(event, 'London')">
+        <p class="ctn-tab-ns">NOW SHOWING</p>
+        <hr class="hr-ns" />
+      </div>
+      <div class="tab-cs tablinks" onclick="openCity(event, 'Paris')">
+        <p class="ctn-tab-cs">COMING SOON</p>
+        <hr class="hr-cs" />
+      </div>
+    </div>
+
+    
+    <div id="London" class="tabcontent">
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71Lvqoov42L.jpg" />
+        <div class="content-card">
+          <b>Avatar</b>
+          <p>120 min</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+      <h3>Paris</h3>
+      <p>Paris is the capital of France.</p>
+    </div> -->
+
+    <script src="HomePage.js"></script>
+    <script>
+      let slide = getElementsByClassName("slide");
+      w3.slideshow(slide, 3000);
+    </script>
+    <script src="HomePage.js"></script>
+  </body>
+</html>
