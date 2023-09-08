@@ -53,25 +53,13 @@ const getData = async () => {
         selectMovie.innerHTML += `<option> ${valueData.Title} </option>`
         selectDate.innerHTML += `<option> ${valueData.Released} </option>`
         selectCinema.innerHTML += `<option> ${valueData.Country} </option>`
-        
-        
-        
-
-        // var nowShowingTab = document.getElementById('now-showing')
-        // var comingSoonTab = document.getElementById('coming-soon')
-        // var containerNS = document.createElement('div')
-        // var containerCS = document.createElement('div')
-        // nowShowingTab.appendChild(containerNS)
-        // comingSoonTab.appendChild(containerCS)
-        // containerNS.classList.add("container-NS")
-        // containerCS.classList.add("container-CS")
-        
+       
         if(!valueData.ComingSoon){
         containerNS.innerHTML += `
           <div class="card">
           <div class="card-hover">
             <p> ${valueData.Rated} </p>
-            <a><button>DETAILS</button></a>
+            <a id="${valueData.id}" onclick="storeId(this)"><button>DETAILS</button></a>
           </div>
           <img src=" ${valueData.Poster} " />
           <div class="content-card">
@@ -92,7 +80,7 @@ const getData = async () => {
           <div class="card">
           <div class="card-hover">
             <p> ${valueData.Rated} </p>
-            <a><button>DETAILS</button></a>
+            <a id="${valueData.id}" onclick="storeId(this)"><button>DETAILS</button></a>
           </div>
           <img src=" ${valueData.Poster} " />
           <div class="content-card">
@@ -110,35 +98,34 @@ const getData = async () => {
     
         
       }
+      
       console.log(data)
     })
 };
 
+function storeId(el) {
+  const clickedId = el.id
+  console.log(clickedId)
+  localStorage.setItem("clickedId", JSON.stringify(clickedId))
+}
   
   
   
   const dataFromAPI = getData();
   
-  
-  // document.getElementById("image").setAttribute("src", dataFromAPI[0].Images[0]);
-  
   function openEvents(evt, cityName) {
-    // Declare all variables
     var i, tabcontent, tablinks;
   
-    // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
-  
-    // Get all elements with class="tablinks" and remove the class "active"
+
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
   
-    // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
   }

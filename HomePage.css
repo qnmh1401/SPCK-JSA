@@ -573,6 +573,7 @@ body * {
 
 .card-img img {
   width: 250px;
+  border-radius: 5px;
 }
 
 .movie-tittle-info {
@@ -600,4 +601,59 @@ body * {
 .card-info-details hr {
   margin-top: 25px;
   margin-bottom: 25px;
+}
+
+.details-p {
+  margin-bottom: 9px;
+}
+
+.runtime-p {
+  padding-bottom: 35px;
+}
+
+.btn-buy-tks {
+  background-color: #d3221c;
+  width: 140px;
+  height: 45px;
+  margin-left: 450px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-buy-tks a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-buy-tks:hover {
+  border: 1px black solid;
+  background-color: black;
+}
+
+.content-movie-details {
+  margin-top: 40px;
+  width: 900px;
+  margin-left: 60px;
+}
+
+.movie-ct {
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+.hr-movie-ct {
+  width: 150px;
+  height: 3px;
+  margin-left: 5px;
+  background-color: #d3221c;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.content-movie {
+  margin-left: 6px;
+  color: #4e4e4e;
+  font-size: 16px;
+  margin-bottom: 8px;
 }

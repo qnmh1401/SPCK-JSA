@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="signup.css" />
   </head>
   <body>
-    <form>
+    <form role="form" onsubmit="signUp(event);" autocomplete="off" action="">
       <div class="signupform">
         <h1>Sign Up</h1>
         <h3 class="name header3">Your name</h3>
@@ -41,13 +41,12 @@
         <input id="checkbox" class="onpass" type="checkbox" name="onpass" />
         <label id="onpass" for="onpass"></label>
 
-        <button class="btn" id="btn">SUMIT</button>
-        <p class="haveacc">
-          Already have an account? <a href="../signin/index.html">Click here</a>
-        </p>
+        <button class="btn" id="btn" type="submit">
+          SUBMIT
+        </button>
       </div>
     </form>
 
-    <script src="signup.js"></script>
+    <script type="text/javascript" src="signup.js"></script>
   </body>
 </html>
