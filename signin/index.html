@@ -7,35 +7,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="signin-form">
-      <h1>Sign In</h1>
-
-      <h3 class="email header3">Email</h3>
-      <input
-        id="inputemail"
-        class="input"
-        type="text"
-        placeholder="Fill in your email address"
-      />
-      <p id="invalidemail" class="alert"></p>
-
-      <h3 class="pass header3">Password</h3>
-      <input
-        id="inputpass"
-        class="input"
-        type="password"
-        placeholder="Fill in your password"
-      />
-      <p id="invalidpass" class="alert"></p>
-      <input id="checkbox" class="onpass" type="checkbox" name="onpass" />
-      <label id="onpass" for="onpass"></label>
-
-      <button class="btn" id="btn">SUMIT</button>
-      <p class="noacc">
-        No account?
-        <a class="clickme" href="../regester/signup.html">Click here</a>
-      </p>
-    </div>
+    <form role="form" onsubmit="signIn(event)" autocomplete="off" action="">
+      <div class="signin-form">
+        <h1>Sign In</h1>
+  
+        <h3 class="email header3">Email</h3>
+        <input
+          id="inputemail"
+          class="input"
+          type="text"
+          placeholder="Fill in your email address"
+        />
+        <p id="invalidemail" class="alert"></p>
+  
+        <h3 class="pass header3">Password</h3>
+        <input
+          id="inputpass"
+          class="input"
+          type="password"
+          placeholder="Fill in your password"
+        />
+        <p id="invalidpass" class="alert"></p>
+        <input id="checkbox" class="onpass" type="checkbox" name="onpass" />
+        <label id="onpass" for="onpass"></label>
+  
+        <button class="btn" id="btn" type="submit">SUBMIT</button>
+        <p class="noacc">
+          No account?
+          <a class="clickme" href="../regester/signup.html">Click here</a>
+        </p>
+      </div>
+    </form>
 
     <script src="../regester/index.js"></script>
   </body>

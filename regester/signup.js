@@ -25,13 +25,13 @@ checkbox.addEventListener("change", function () {
     var invalidName = document.getElementById("invalidname");
     var invalidEmail = document.getElementById("invalidemail");
     var invalidPass = document.getElementById("invalidpass");
-    if (yourName.value == "") {
+    if (yourName.value == "" || yourName == null) {
         invalidName.innerText = "Name is empty";
       } else {
         invalidName.innerText = "";
       }
     
-      if (email.value == "") {
+      if (email.value == "" || email == null) {
         invalidEmail.innerText = "Email is empty";
       } else if (!filter.test(email.value)) {
         invalidEmail.innerText = "Wrong email";
@@ -39,7 +39,7 @@ checkbox.addEventListener("change", function () {
         invalidEmail.innerText = "";
       }
     
-      if (passWord.value == "") {
+      if (passWord.value == "" || passWord == null) {
         invalidPass.innerText = "Password is empty";
       } else if (passWord.value.length < 6) {
         invalidPass.innerText = "Passwords must be at least 6 characters";
@@ -48,13 +48,16 @@ checkbox.addEventListener("change", function () {
       }
     
       if (
-        !yourName.value == "" &&
-        !email.value == "" &&
+        (yourName.value != "" && yourName != null) &&
+        (email.value != "" && email != null) &&
         filter.test(email.value) &&
-        !passWord.value == "" &&
-        !passWord.value.length < 6
+        (passWord.value != "" &&
+        passWord.value.length >= 6 &&
+        passWord != null)
       ) {
         window.location = "../signin/index.html";
+      } else {
+        e.preventDefault();
       }
     
       //   const accounts = [
@@ -66,8 +69,11 @@ checkbox.addEventListener("change", function () {
     
       //   localStorage.setItem("accounts", JSON.stringify(accounts));
     }
+
+    console.log(localStorage.getItem("formData"));
+
     
-    document.querySelector("form").addEventListener("submit", signUp);
+    document.querySelector("form").addEventListener("submit", handleClick, signUp);
     
     function signUp(e) {
       let name = document.getElementById("inputinfor").value,
@@ -87,9 +93,9 @@ checkbox.addEventListener("change", function () {
         localStorage.setItem("formData", JSON.stringify(formData));
         document.querySelector("form").reset();
         alert("Account Created Successfully");
+        window.location.replace = "../HomePage.html"
       } else {
         alert("Ooopppssss... Duplicate found!!!\nYou have already signed up");
-        location.href = "../signin/index.html"
       }
       e.preventDefault();
     }
